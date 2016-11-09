@@ -1,0 +1,17 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+
+platform:
+  - name: ubuntu-14.04
+    run_list:
+    - recipe[apt]
+
+suites: 
+  - name: default
+    run_list: 
+      - recipe[kt_nginx_php::default]

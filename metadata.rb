@@ -1,0 +1,16 @@
+name             'kt_nginx_php'
+maintainer       'Kiwi Technologies Pvt, Ltd.'
+maintainer_email 'pramod.singh@kiwitech.com'
+license          'All rights reserved'
+description      'Installs/Configures kt_nginx_php'
+long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+version          '0.1.0'
+supports 	 'centos'
+supports 	 'ubuntu'
+
+depends 	 'apt'
+depends   	 'nginx', '= 2.7.6'
+depends 	 'chef-sugar'
+depends  	 'php', '= 1.5.0'
+depends  	 'php-fpm', '= 0.7.4'
+depends  	 'yum-ius'

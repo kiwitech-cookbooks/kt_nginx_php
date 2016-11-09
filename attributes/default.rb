@@ -1,5 +1,5 @@
 # Desired PHP version - 5.5 and 5.6 are supported
-default['kt_nginx_php']['php_version'] = '5.5'
+default['kt_nginx_php']['php_version'] = '5.6'
 
 # Disable the default pool from upstream php-fpm.
 # We are adding this here instead of in our recipe to allow the consumer of kt_nginx_php to override the attribute.
@@ -15,5 +15,5 @@ default['kt_nginx_php']['php-fpm']['default_pool']['enable'] = true
 default['kt_nginx_php']['php_packages_install']['enable'] = true
 
 # index.html and info.php files
-default['kt_nginx_php']['index_file'] = true
+default['kt_nginx_php']['index_file'] = false
 default['kt_nginx_php']['info_file'] = true

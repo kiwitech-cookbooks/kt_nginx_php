@@ -43,7 +43,6 @@ template "#{node['nginx']['dir']}/sites-available/default.conf" do
   only_if { node['kt_nginx_php']['nginx']['default_site']['enable'] }
 end
 
-
 # Configuration for index.html page
 template '/var/www/default/index.html' do
   source 'index.html.erb'
@@ -64,7 +63,6 @@ template '/var/www/default/info.php' do
   action :create
   only_if { node['kt_nginx_php']['info_file'] }
 end
-
 
 # Enable (or not) our default site
 nginx_site 'default.conf' do
